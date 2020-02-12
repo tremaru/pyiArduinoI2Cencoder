@@ -72,6 +72,7 @@ ENC_TURN              = 0
 ENC_TURN_LEFT         = 1   
 ENC_TURN_RIGHT        = 2   
 
+NO_BEGIN = 1
 
 cdef class pyiArduinoI2Cencoder:
     cdef iarduino_I2C_Encoder c_module
