@@ -6,14 +6,18 @@ cdef extern from "iarduino_I2C_Encoder.h":
         iarduino_I2C_Encoder() except +
         iarduino_I2C_Encoder(unsigned char) except +
         bint begin()
-        bint changeAddress(unsigned char)
         bint reset()
+        bint changeAddress(unsigned char)
         unsigned char getAddress()
         unsigned char getVersion()
-        unsigned short getButton()
+        bint getPullI2C()
+        bint setPullI2C(bint)
+        unsigned short getButton(unsigned char)
         short getEncoder(unsigned char)
         short getPosition()
         bint resPosition()
-        bint resPosSettings(unsigned char, bint)
-        bint setPinOut(unsigned char, unsigned char, unsigned short))
-
+        bint setPosSettings(unsigned char, bint)
+        bint setPinOut(unsigned char, unsigned char, unsigned short)
+        bint invEncoder(bint)
+        bint setServoLimit(unsigned short, unsigned short) 
+        unsigned short getServoWidth()
