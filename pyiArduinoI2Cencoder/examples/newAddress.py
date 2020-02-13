@@ -4,7 +4,7 @@
 from pyiArduinoI2Cencoder import *
 import sys
 
-# Объявляем объект module для работы с функциями и методами библиотеки pyiArduinoI2Cencoder.
+# Инстанциируем объект module для работы с функциями и методами библиотеки pyiArduinoI2Cencoder.
 # Если при объявлении объекта указать адрес, например, module(0x0B),
 # то пример будет работать с тем модулем, адрес которого был указан.
 module = pyiArduinoI2Cencoder(None, NO_BEGIN)

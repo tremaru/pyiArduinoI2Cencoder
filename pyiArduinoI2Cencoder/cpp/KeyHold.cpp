@@ -2,13 +2,11 @@
  *	ДАННЫЙ ПРИМЕР ФИКСИРУЕТ УДЕРЖАНИЕ КНОПКИ:
  * В stdout будет выведено "ON" если кнопка
  * удерживается дольше фиксированного времени.
- * !!! Данный пример не использует задержек и будет
- * спамить шину I2С. При этом процессор RPi 4 будет
- * занят на ~8%.
  */
 
 #include <iostream>
 #include <signal.h>
+
 #include "../iarduino_I2C_Encoder.h"
 iarduino_I2C_Encoder enc(0x09);
 
@@ -35,17 +33,20 @@ int main()
 		sigaction(SIGINT, &sigIntHandler, NULL);
 		loop();
 	}
+
 	return 0;
 }
 
 void loop()
 {
-	// bool f = enc.getButton(KEY_HOLD_05);  // Считываем флаг удержания кнопки дольше 0,5 сек
-	bool f = enc.getButton(KEY_HOLD_10);     // Считываем флаг удержания кнопки дольше 1,0 сек
-	// bool f = enc.getButton(KEY_HOLD_20);  // Считываем флаг удержания кнопки дольше 2,0 сек
+	// bool f = enc.getButton(KEY_HOLD_05);  // Считываем удержание дольше 0,5 сек
+	bool f = enc.getButton(KEY_HOLD_10);     // Считываем удержание дольше 1,0 сек
+	// bool f = enc.getButton(KEY_HOLD_20);  // Считываем удержание дольше 2,0 сек
 
 	if (f)
-		printf("\e[01;32m%s\r", "ON ");
+		printf("\e[01;32m%s\n", "ON ");
 	else
-		printf("\e[01;31m%s\r", "OFF");
+		printf("\e[01;31m%s\n", "OFF");
+
+	delay(100);
 }

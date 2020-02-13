@@ -1,23 +1,21 @@
 #   ДАННЫЙ ПРИМЕР ФИКСИРУЕТ УДЕРЖАНИЕ КНОПКИ:
 # Если кнопка удерживается дольше фиксированного времени,
 # в stdout выводится "ON".
-# !!! Данный пример не использует задержек и будет
-# спамить шину I2C. При этом процессор RPi 4 будет
-# загружен на 13%
 
-from pyiArduinoI2Cencoder import *              #   Подключаем библиотеку для работы с энкодером I2C-flash.
-enc = pyiArduinoI2Cencoder(0x09)                #   Объявляем объект enc для работы с функциями и методами библиотеки pyiArduinoI2Cencoder, указывая адрес модуля на шине I2C.
-                                                #   Если объявить объект без указания адреса (pyiArduinoI2Cencoder enc ), то адрес будет найден автоматически.
-try:                                            #
-    while True:                                 #
-        # f = enc.getButton(KEY_HOLD_05)        #   Считываем флаг удержания кнопки дольше 0,5 сек в переменную f.
-        f = enc.getButton(KEY_HOLD_10)          #   Считываем флаг удержания кнопки дольше 1,0 сек в переменную f.
-        # f = enc.getButton(KEY_HOLD_20)        #   Считываем флаг удержания кнопки дольше 2,0 сек в переменную f.
+from time import sleep
 
-        if f:
-            print("ON \r", end = "")
-        else:
-            print("OFF\r", end = "")
+# Подключаем библиотеку для работы с энкодером I2C-flash.
+from pyiArduinoI2Cencoder import *
+# Инстанциируем объект, указывая адрес модуля на шине I2C.
+enc = pyiArduinoI2Cencoder(0x09)
 
-except:
-    print()
+while True:
+    # f = enc.getButton(KEY_HOLD_05)  # Считываем удержание дольше 0,5 сек
+    f = enc.getButton(KEY_HOLD_10)    # Считываем удержание дольше 1,0 сек
+    # f = enc.getButton(KEY_HOLD_20)  # Считываем удержание дольше 2,0 сек
+
+    if f:
+        print("ON")
+        sleep(1)
+
+    sleep(.1)
