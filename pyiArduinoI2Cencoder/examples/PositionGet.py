@@ -16,6 +16,8 @@ enc.begin()
 # Указываем считать до 2 полных оборотов.
 enc.setPosSettings(2)
 
+print("Вращайте вал!")
+
 while True:
 
     p = enc.getPosition()

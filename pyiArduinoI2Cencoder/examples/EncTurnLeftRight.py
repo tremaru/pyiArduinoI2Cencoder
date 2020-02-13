@@ -9,6 +9,8 @@ from pyiArduinoI2Cencoder import *
 # Инстанциируем объект, указывая адрес модуля на шине I2C.
 enc = pyiArduinoI2Cencoder(0x09)
 
+print("Вращайте барабан!")
+
 while True:
 
     # Определяем переменные для чтения количества тактов поворота энкодера.

@@ -9,6 +9,8 @@ from pyiArduinoI2Cencoder import *
 # Инстанциируем объект, указывая адрес модуля на шине I2C.
 enc = pyiArduinoI2Cencoder(0x09)
 
+print("Удерживайте кноку вала")
+
 while True:
     # f = enc.getButton(KEY_HOLD_05)  # Считываем удержание дольше 0,5 сек
     f = enc.getButton(KEY_HOLD_10)    # Считываем удержание дольше 1,0 сек
