@@ -4231,7 +4231,7 @@ if (!__Pyx_RefNanny) {
  * ENC_KEY_CHANGED       = 0x01
  * ENC_PIN_MAX_TURN      = 0xF0             # <<<<<<<<<<<<<<
  * ENC_PIN_MODE          = 0x0F
- * ENC_PIN_MODE_OFF      = 0b00
+ * ENC_PIN_MODE_OFF      = 0b0000
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MAX_TURN, __pyx_int_240) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
 
@@ -4239,77 +4239,77 @@ if (!__Pyx_RefNanny) {
  * ENC_KEY_CHANGED       = 0x01
  * ENC_PIN_MAX_TURN      = 0xF0
  * ENC_PIN_MODE          = 0x0F             # <<<<<<<<<<<<<<
- * ENC_PIN_MODE_OFF      = 0b00
- * ENC_PIN_MODE_KEY      = 0b00
+ * ENC_PIN_MODE_OFF      = 0b0000
+ * ENC_PIN_MODE_KEY      = 0b0001
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE, __pyx_int_15) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":49
  * ENC_PIN_MAX_TURN      = 0xF0
  * ENC_PIN_MODE          = 0x0F
- * ENC_PIN_MODE_OFF      = 0b00             # <<<<<<<<<<<<<<
- * ENC_PIN_MODE_KEY      = 0b00
- * ENC_PIN_MODE_TRG      = 0b00
+ * ENC_PIN_MODE_OFF      = 0b0000             # <<<<<<<<<<<<<<
+ * ENC_PIN_MODE_KEY      = 0b0001
+ * ENC_PIN_MODE_TRG      = 0b0010
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_OFF, __pyx_int_0) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":50
  * ENC_PIN_MODE          = 0x0F
- * ENC_PIN_MODE_OFF      = 0b00
- * ENC_PIN_MODE_KEY      = 0b00             # <<<<<<<<<<<<<<
- * ENC_PIN_MODE_TRG      = 0b00
- * ENC_PIN_MODE_PWM      = 0b00
+ * ENC_PIN_MODE_OFF      = 0b0000
+ * ENC_PIN_MODE_KEY      = 0b0001             # <<<<<<<<<<<<<<
+ * ENC_PIN_MODE_TRG      = 0b0010
+ * ENC_PIN_MODE_PWM      = 0b0011
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_KEY, __pyx_int_0) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_KEY, __pyx_int_1) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":51
- * ENC_PIN_MODE_OFF      = 0b00
- * ENC_PIN_MODE_KEY      = 0b00
- * ENC_PIN_MODE_TRG      = 0b00             # <<<<<<<<<<<<<<
- * ENC_PIN_MODE_PWM      = 0b00
- * ENC_PIN_MODE_PWM_LOG  = 0b01
+ * ENC_PIN_MODE_OFF      = 0b0000
+ * ENC_PIN_MODE_KEY      = 0b0001
+ * ENC_PIN_MODE_TRG      = 0b0010             # <<<<<<<<<<<<<<
+ * ENC_PIN_MODE_PWM      = 0b0011
+ * ENC_PIN_MODE_PWM_LOG  = 0b0100
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_TRG, __pyx_int_0) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_TRG, __pyx_int_2) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":52
- * ENC_PIN_MODE_KEY      = 0b00
- * ENC_PIN_MODE_TRG      = 0b00
- * ENC_PIN_MODE_PWM      = 0b00             # <<<<<<<<<<<<<<
- * ENC_PIN_MODE_PWM_LOG  = 0b01
- * ENC_PIN_MODE_SER      = 0b01
+ * ENC_PIN_MODE_KEY      = 0b0001
+ * ENC_PIN_MODE_TRG      = 0b0010
+ * ENC_PIN_MODE_PWM      = 0b0011             # <<<<<<<<<<<<<<
+ * ENC_PIN_MODE_PWM_LOG  = 0b0100
+ * ENC_PIN_MODE_SER      = 0b0101
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_PWM, __pyx_int_0) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_PWM, __pyx_int_3) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":53
- * ENC_PIN_MODE_TRG      = 0b00
- * ENC_PIN_MODE_PWM      = 0b00
- * ENC_PIN_MODE_PWM_LOG  = 0b01             # <<<<<<<<<<<<<<
- * ENC_PIN_MODE_SER      = 0b01
- * ENC_PIN_MODE_DAC      = 0b01
+ * ENC_PIN_MODE_TRG      = 0b0010
+ * ENC_PIN_MODE_PWM      = 0b0011
+ * ENC_PIN_MODE_PWM_LOG  = 0b0100             # <<<<<<<<<<<<<<
+ * ENC_PIN_MODE_SER      = 0b0101
+ * ENC_PIN_MODE_DAC      = 0b0111
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_PWM_LOG, __pyx_int_1) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_PWM_LOG, __pyx_int_4) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":54
- * ENC_PIN_MODE_PWM      = 0b00
- * ENC_PIN_MODE_PWM_LOG  = 0b01
- * ENC_PIN_MODE_SER      = 0b01             # <<<<<<<<<<<<<<
- * ENC_PIN_MODE_DAC      = 0b01
+ * ENC_PIN_MODE_PWM      = 0b0011
+ * ENC_PIN_MODE_PWM_LOG  = 0b0100
+ * ENC_PIN_MODE_SER      = 0b0101             # <<<<<<<<<<<<<<
+ * ENC_PIN_MODE_DAC      = 0b0111
  * ENC_RES_SIGN_EN       = 0x80
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_SER, __pyx_int_1) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_SER, __pyx_int_5) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":55
- * ENC_PIN_MODE_PWM_LOG  = 0b01
- * ENC_PIN_MODE_SER      = 0b01
- * ENC_PIN_MODE_DAC      = 0b01             # <<<<<<<<<<<<<<
+ * ENC_PIN_MODE_PWM_LOG  = 0b0100
+ * ENC_PIN_MODE_SER      = 0b0101
+ * ENC_PIN_MODE_DAC      = 0b0111             # <<<<<<<<<<<<<<
  * ENC_RES_SIGN_EN       = 0x80
  * ENC_RES_RESET         = 0x40
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_DAC, __pyx_int_1) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_PIN_MODE_DAC, __pyx_int_7) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":56
- * ENC_PIN_MODE_SER      = 0b01
- * ENC_PIN_MODE_DAC      = 0b01
+ * ENC_PIN_MODE_SER      = 0b0101
+ * ENC_PIN_MODE_DAC      = 0b0111
  * ENC_RES_SIGN_EN       = 0x80             # <<<<<<<<<<<<<<
  * ENC_RES_RESET         = 0x40
  * ENC_RES_MAX_TURN      = 0x3F
@@ -4317,7 +4317,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENC_RES_SIGN_EN, __pyx_int_128) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
 
   /* "pyiArduinoI2Cencoder/pyiArduinoI2Cencoder.pyx":57
- * ENC_PIN_MODE_DAC      = 0b01
+ * ENC_PIN_MODE_DAC      = 0b0111
  * ENC_RES_SIGN_EN       = 0x80
  * ENC_RES_RESET         = 0x40             # <<<<<<<<<<<<<<
  * ENC_RES_MAX_TURN      = 0x3F
