@@ -8,7 +8,7 @@ DEF_CHIP_ID_FLASH     = 0x3C
 DEF_CHIP_ID_METRO     = 0xC3
 DEF_MODEL_ENC         = 0x09
 
-# Адреса регистров модуля:    
+# Адреса регистров модуля:
 REG_FLAGS_0           = 0x00
 REG_BITS_0            = 0x01
 REG_FLAGS_1           = 0x02
@@ -34,8 +34,8 @@ REG_ENC_SER_MAX_L     = 0x1C
 REG_ENC_SER_MAX_H     = 0x1D
 REG_ENC_SER_NOW_L     = 0x1E
 REG_ENC_SER_NOW_H     = 0x1F
-                            
-# Позиция битов и флагов:     
+
+# Позиция битов и флагов:
 ENC_KEY_PUSHED        = 0x80
 ENC_KEY_RELEASED      = 0x40
 ENC_KEY_PRESSED       = 0x20
@@ -59,18 +59,18 @@ ENC_RES_MAX_TURN      = 0x3F
 ENC_RES_SIGN          = 0x80
 ENC_ENC_INV_DIR       = 0x01
 
-KEY_PUSHED            = 1   
-KEY_RELEASED          = 2   
-KEY_PRESSED           = 3   
-KEY_TRIGGER           = 4   
-KEY_HOLD_05           = 5   
-KEY_HOLD_10           = 6   
-KEY_HOLD_20           = 7   
-KEY_CHANGED           = 8   
-KEY_TIME_PRESSED      = 9   
-ENC_TURN              = 0   
-ENC_TURN_LEFT         = 1   
-ENC_TURN_RIGHT        = 2   
+KEY_PUSHED            = 1
+KEY_RELEASED          = 2
+KEY_PRESSED           = 3
+KEY_TRIGGER           = 4
+KEY_HOLD_05           = 5
+KEY_HOLD_10           = 6
+KEY_HOLD_20           = 7
+KEY_CHANGED           = 8
+KEY_TIME_PRESSED      = 9
+ENC_TURN              = 0
+ENC_TURN_LEFT         = 1
+ENC_TURN_RIGHT        = 2
 
 NO_BEGIN = 1
 
@@ -94,6 +94,8 @@ cdef class pyiArduinoI2Cencoder:
                           ", инструкция по включению:"
                           " https://wiki.iarduino.ru/page/raspberry-i2c-spi/")
 
+                    raise SystemExit(1)
+
         else:
 
             self.c_module = iarduino_I2C_Encoder()
@@ -108,6 +110,8 @@ cdef class pyiArduinoI2Cencoder:
                           " Запустите raspi-config и включите интерфейс"
                           ", инструкция по включению:"
                           " https://wiki.iarduino.ru/page/raspberry-i2c-spi/")
+
+                    raise SystemExit(1)
 
     def begin(self):
         return self.c_module.begin()
