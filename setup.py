@@ -6,7 +6,7 @@ def readme():
         return readme.read()
 
 setup(name='pyiArduinoI2Cencoder',
-    version='1.0.4',
+    version='1.0.5',
     description='iarduino.ru module for Raspberry Pi',
     long_description=readme(),
     classifiers=[

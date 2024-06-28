@@ -77,7 +77,7 @@ NO_BEGIN = 1
 cdef class pyiArduinoI2Cencoder:
     cdef iarduino_I2C_Encoder c_module
 
-    def __cinit__(self, address=None, auto=None, bus=None):
+    def __cinit__(self, address=None, auto=None):
 
         if address is not None:
 
